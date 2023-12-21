@@ -8,6 +8,7 @@ public class SaveMyContactsApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SaveMyContactsApplication.class, args);
+        System.out.println("The web app started......");
     }
 
 }
