@@ -1,0 +1,7 @@
+spring:
+  datasource:
+  url: 'jdbc:sqlite:database_name.db'
+  driver-class-name: 'org.sqlite.JDBC'
+  #spring.datasource.url = jdbc:sqlite:contacts.db
+
+#spring.datasource.driver-class-name = org.sqlite.JDBC
