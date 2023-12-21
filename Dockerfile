@@ -3,6 +3,6 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 FROM openjdk:17.0.1-jdk-slim
-COPY --from=build /target/SaveMyContacts-0.0.1-SNAPSHOT.jar SaveMyContacts.jar
+COPY --from=build /target/save_my_contacts-0.0.1-SNAPSHOT.jar SaveMyContacts.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","SaveMyContacts.jar"]
