@@ -11,7 +11,10 @@
 </head>
 <body class="w-100 container d-flex flex-column align-items-center justify-content-start gap-5">
 <header class="w-100 py-3 d-flex flex-row justify-content-between align-items-center border border-0 border-bottom border-primary">
-    <a th:href="@{/}" class="text-primary btn "><h4>Save My <span class="text-danger">Contacts</span></h4></a>
+    <a th:href="@{/}" class="text-primary btn d-flex align-items-center">
+        <img class=" border border-primary rounded rounded-circle" src="images/dere_gurd.jpg" alt="Dere gurd photo" width="50px" >
+        <h4 class=" mx-2">Save My <span class="text-danger">Contacts</span></h4>
+    </a>
     <a th:href="@{login}" class="btn btn-primary">Login</a>
 </header>
 <section class="w-100 d-flex flex-column align-items-center gap-2">
