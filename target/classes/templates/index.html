@@ -12,7 +12,8 @@
 <body class="w-100 container d-flex flex-column align-items-center justify-content-start gap-5">
 <header class="w-100 py-3 d-flex flex-row justify-content-between align-items-center border border-0 border-bottom border-primary">
     <a th:href="@{/}" class="text-primary btn d-flex align-items-center">
-        <img class=" border border-primary rounded rounded-circle" src="images/dere_gurd.jpg" alt="Dere gurd photo" width="50px" >
+        <img class=" border border-primary rounded rounded-circle" src="images/dere_gurd.jpg" alt="Dere gurd photo"
+             width="50px">
         <h4 class=" mx-2">Save My <span class="text-danger">Contacts</span></h4>
     </a>
     <a th:href="@{login}" class="btn btn-primary">Login</a>
@@ -46,7 +47,7 @@
                         <option value="+252 Eritrea">
                     </datalist>
 
-                    <input type="text" th:field="*{phoneNumber}" id="phoneNumber" class="form-control flex-grow-1">
+                    <input type="tel" th:field="*{phoneNumber}" id="phoneNumber" class="form-control flex-grow-1">
                 </div>
             </div>
             <div class="add-new-contact w-100 d-flex flex-column justify-content-center ">
@@ -62,7 +63,7 @@
                 <th>ID</th>
                 <th>Firstname</th>
                 <th>Lastname</th>
-                <th>Country Code</th>
+                <th>Country Code, Name</th>
                 <th>Phone Number</th>
                 <th>More ...</th>
             </tr>
@@ -70,11 +71,11 @@
             <tbody class="border-warning" th:each="contact : ${allContacts}">
 
             <tr>
-                <td th:text="${contact.id}">1</td>
-                <td th:text="${contact.firstname}">Dere</td>
-                <td th:text="${contact.lastname}">Boy</td>
-                <td th:text="|${contact.countryCode} ${contact.countryName}|">+251 Eth</td>
-                <td th:text="${contact.phoneNumber}">922982139</td>
+                <td th:text="${contact.id}">    </td>
+                <td th:text="${contact.firstname}">     </td>
+                <td th:text="${contact.lastname}">  </td>
+                <td th:text="|${contact.countryCode}, ${contact.countryName}|">     </td>
+                <td th:text="${contact.phoneNumber}">   </td>
                 <td>
                 </td>
             </tr>
