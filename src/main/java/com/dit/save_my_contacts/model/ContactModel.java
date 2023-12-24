@@ -13,5 +13,5 @@ public class ContactModel {
     private String lastname;
     private String countryName;
     private int countryCode;
-    private long phoneNumber;
+    private String phoneNumber;
 }

@@ -14,7 +14,7 @@ public class ConnectionDB {
 
     public Connection getConnection(){
         try {
-            String dbPath = Objects.requireNonNull(ConnectionDB.class.getResource("")).toExternalForm().concat("database_name.db");
+            String dbPath = Objects.requireNonNull(ConnectionDB.class.getResource("")).toExternalForm().concat("database_names.db");
 
             System.out.println(dbPath);
         }catch (NullPointerException exception){
