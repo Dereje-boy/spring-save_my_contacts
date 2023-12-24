@@ -2,12 +2,16 @@ package com.dit.save_my_contacts.controller;
 
 import com.dit.save_my_contacts.model.ContactModel;
 import com.dit.save_my_contacts.service.ContactService;
+import com.sun.jdi.connect.spi.Connection;
+import jakarta.servlet.http.WebConnection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("contacts/")
@@ -31,5 +35,11 @@ public class ContactsController {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("redirect:/");
         return modelAndView;
+    }
+
+    @GetMapping("/allcontacts")
+    public List<ContactModel> allContacts(){
+         
+        return contactService.getAllContacts();
     }
 }
