@@ -6,9 +6,10 @@
 body{
     width: 100vw;
 }
-td{
-    cursor: pointer;
-}
+/*td{*/
+/*    cursor: pointer;*/
+/*done by bootstrap's role="button" attribute*/
+/*}*/
 tr:hover>td{
     background-color:blue;
     color:white;

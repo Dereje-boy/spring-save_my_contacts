@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.servlet.ModelAndView;
+import reactor.core.publisher.Flux;
 
 import java.util.List;
 
@@ -39,7 +41,7 @@ public class ContactsController {
 
     @GetMapping("/allcontacts")
     public List<ContactModel> allContacts(){
-         
+
         return contactService.getAllContacts();
     }
 }

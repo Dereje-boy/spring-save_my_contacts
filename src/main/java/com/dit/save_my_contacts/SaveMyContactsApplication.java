@@ -1,9 +1,9 @@
 package com.dit.save_my_contacts;
 
-import com.dit.save_my_contacts.dao.ContactDAO;
-import com.dit.save_my_contacts.model.ContactModel;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.net.URL;
 
 @SpringBootApplication
 public class SaveMyContactsApplication {

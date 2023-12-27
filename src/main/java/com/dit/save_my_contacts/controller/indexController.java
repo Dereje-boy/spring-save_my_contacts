@@ -35,7 +35,6 @@ public class indexController {
         System.out.println("wrong page request");
         return "errorPage";
     }
-
     @EventListener(ApplicationReadyEvent.class)
     public void ApplicationReadyEvent(){
         System.out.println("Event application context raised");

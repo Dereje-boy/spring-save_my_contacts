@@ -6,10 +6,10 @@
           content="width=device-width">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Save My Contacts | Homepage</title>
-    <link rel="stylesheet" th:href="@{css/index.css}"/>
     <link rel="stylesheet" th:href="@{bootstrap/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{css/index.css}"/>
 </head>
-<body class="w-100 container d-flex flex-column align-items-center justify-content-start gap-5">
+<body class="w-100 px-md-2 px-lg-5 d-flex flex-column align-items-center justify-content-start gap-5">
 <header class="w-100 py-3 d-flex flex-row justify-content-between align-items-center border border-0 border-bottom border-primary">
     <a th:href="@{/}" class="text-primary btn d-flex align-items-center">
         <img class=" border border-primary rounded rounded-circle" src="images/dere_gurd.jpg" alt="Dere gurd photo"
@@ -23,7 +23,8 @@
     <h3 class="text-primary fw-bolder">Add Your New <span class="text-danger">Contacts</span> Here...</h3>
     <div class="new-contact d-flex w-100">
         <form action="/contacts/new" method="post"
-              class="d-flex flex-column flex-md-row align-items-center align-items-md-end gap-3 justify-content-between w-100"
+              class="d-flex flex-column flex-lg-row flex-md-column
+              align-items-center px-md-3 align-items-md-end gap-3 justify-content-between w-100"
               th:object="${contactModel}">
             <div class="firstname w-100 d-flex flex-column justify-content-center ">
                 <label class="form-label fw-bold text-center" for="firstname">Firstname</label>
@@ -57,7 +58,7 @@
     </div>
     <h2 class="text-primary fw-bolder">All of Your <span class="text-danger">Contacts</span></h2>
     <div class="w-100 table-responsive">
-        <table class="table table-hover">
+        <table class="table table-hover table-responsive">
             <thead class="bg-danger text-white">
             <tr>
                 <th>ID</th>
@@ -68,9 +69,9 @@
                 <th>More ...</th>
             </tr>
             </thead>
-            <tbody class="border-warning" th:each="contact : ${allContacts}">
+            <tbody class="border-warning table-responsive align-middle" th:each="contact : ${allContacts}">
 
-            <tr>
+            <tr  role="button">
                 <td th:text="${contact.id}">    </td>
                 <td th:text="${contact.firstname}">     </td>
                 <td th:text="${contact.lastname}">  </td>

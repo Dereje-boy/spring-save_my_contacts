@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>New User | SMC</title>
+  <link rel="stylesheet" th:href="@{../bootstrap/css/bootstrap.min.css}"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100vw;
+      min-height: 100vh;
+    }
+
+    .my-container {
+      border-radius: 20px;
+    }
+
+    @media (max-width: 768px ) {
+      .my-container {
+        min-width: 75vw;
+        max-width: 75vw;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .my-container {
+        width: 50vw;
+      }
+    }
+
+    @media (min-width: 850px) {
+      .my-container {
+        width: 50vw;
+      }
+    }
+
+  </style>
+</head>
+<body class="bg-dark d-flex flex-column justify-content-center align-items-center">
+<div class="my-container container-lg px-md-3 bg-white h-auto py-5 gap-3">
+  <h1 class="text-center">Create New Account</h1>
+  <form class="newAccount-container container d-flex flex-column gap-3 rounded rounded-3" method="post"
+        th:object="${user}" >
+    <p class="text-center text-primary" th:text="${message}"></p>
+
+    <div class="">
+      <label for="firstname" class="form-label">Firstname </label>
+      <input th:field="${user.firstname}" type="text" class="form-control" id="firstname"
+             placeholder="John" required>
+    </div>
+    <div class="">
+      <label for="lastname" class="form-label">Lastname </label>
+      <input th:field="${user.lastname}" type="text" class="form-control" id="lastname"
+             placeholder="Thomas">
+    </div>
+    <div class="">
+      <label for="username_or_email" class="form-label">Email </label>
+      <input th:field="${user.email}" type="email" class="form-control" id="username_or_email"
+             placeholder="name@example.com" required>
+    </div>
+    <div class="">
+      <label for="password" class="form-label">Password</label>
+      <input th:field="${user.password}" type="password" class="form-control" id="password"  required/>
+    </div>
+    <div class="">
+      <input type="submit" value="Login" class="form-control btn btn-primary"/>
+    </div>
+
+    <div >
+      <a href="../login" class="card-link ">
+        <h6 class="text-primary ">Do you have an account? <i class="fw-bolder">Login</i></h6>
+      </a>
+      <a href="../" class="card-link d-block">Go Home</a>
+    </div>
+  </form>
+</div>
+</body>
+</html>
